@@ -15,7 +15,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
 }
 
 .topbar > .contents > .logo {
@@ -48,6 +48,49 @@
     flex-direction: column;
 }
 
+.projectlist {
+    display: flex;
+    flex-direction: column;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.project > img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.project > .projectcontents {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.project > .projectcontents > .title {
+    display: inline;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.project > .projectcontents >  .title > .year {
+    font-weight: 400;
+}
+
+.project > .projectcontents > .authors {
+    font-style: italic;
+    margin-bottom: 6px;
+}
+
+.project > .projectcontents > .authors > .authorholder > .highlight_person {
+    font-weight: 600;
+}
+
 .publications {
     margin-top: 80px;
     width: 100%;
@@ -61,67 +104,81 @@
 }
 
 .publication {
-    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-.publication > .maininfo {
+.publication > .info {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.publication > .maininfo > .title {
+.publication > .info > .maininfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.publication > .info > .maininfo > .title {
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
-.publication > .maininfo > .authors {
+.publication > .info > .maininfo > .authors {
     display: inline-block;
     text-align: left;
-    margin-bottom: 4px;
+    font-style: italic;
+    margin-bottom: 6px;
 }
 
-.publication > .maininfo > .authors > .authorholder > .highlight_author {
+.publication > .info > .maininfo > .authors > .authorholder > .highlight_author {
     font-weight: bold;
 }
 
-.publication > .maininfo > .awards {
-    margin-bottom: 4px;
+.publication > .awards {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 6px;
 }
 
-.publication > .maininfo > .awards > .award {
+.publication > .awards > .award {
     color: blue;
-    font-weight: 600;
+    font-weight: 700;
+    margin-right: 14px;
 }
 
-.publication > .maininfo > .links {
+.publication > .links {
     display: flex;
 }
 
-.publication > .maininfo > .links > a {
+.publication > .links > a {
     color: gray;
     margin-right: 10px;
 }
 
-.publication > .maininfo > .links > a:hover {
+.publication > .links > a:hover {
     color: darkgray;
 }
 
-.publication > .otherinfo {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    width: 120px;
+.publication > .info > .subinfo {
+    display: inline-block;
+    /* flex-direction: row;
+    align-items: end; */
+    width: 100%;
     text-align: left;
+    margin-bottom: 4px;
 }
 
-.publication > .otherinfo > .booktitle {
+.publication > .info > .subinfo > .booktitle {
     font-weight: bold;
     font-size: 18px;
+    margin-right: 6px;
 }
 
 .title {
@@ -129,10 +186,11 @@
     font-weight: 800;
     width: 100%;
     text-align: left;
+    margin-bottom: 20px;
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 808px) {
     .topbar  > .contents {
         padding: 0;
         width: 760px;
@@ -143,12 +201,32 @@
     .projects {
         width: 760px;
     }
+    .project {
+        flex-direction: row;
+    }
+    .project > img {
+        width: 360px;
+        margin-right: 24px;
+        margin-bottom: 0px;
+    }
     .publications {
         width: 760px;
     }
+    .publication > .info {
+        flex-direction: row;
+    }
+    .publication > .info > .subinfo {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        width: 130px;
+    }
+    .publication > .info > .subinfo > .booktitle {
+        margin-right: 0;
+    }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1008px) {
     .topbar  > .contents {
         padding: 0;
         width: 960px;
@@ -159,7 +237,27 @@
     .projects {
         width: 960px;
     }
+    .project {
+        flex-direction: row;
+    }
+    .project > img {
+        width: 360px;
+        margin-right: 24px;
+        margin-bottom: 0px;
+    }
     .publications {
         width: 960px;
+    }
+    .publication > .info {
+        flex-direction: row;
+    }
+    .publication > .info > .subinfo {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        width: 130px;
+    }
+    .publication > .info > .subinfo > .booktitle {
+        margin-right: 0;
     }
 }
