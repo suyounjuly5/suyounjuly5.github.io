@@ -1,3 +1,7 @@
+:root {
+    --theme-color: #71AFBD;
+}
+
 .topbar {
     position: fixed; 
     top: 0;
@@ -27,22 +31,48 @@
     text-decoration: none;
     color: black;
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .topbar > .contents > .buttons > a:hover {
-    color: gray;
+    color: var(--theme-color);
 }
 
 .about {
-    margin-top: 80px;
+    margin-top: 50px;
     width: 100%;
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 
+.about > img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about > .contents {
+    margin: 30px 0 0 0;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.about > .contents > .greeting {
+    font-weight: 700;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.about > .contents > .description > a {
+    text-decoration: none;
+    color: var( --theme-color);
+    font-weight: 600;
+}
+
 .projects {
-    margin-top: 80px;
+    margin-top: 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -75,16 +105,16 @@
 .project > .projectcontents > .title {
     display: inline;
     font-size: 24px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
-.project > .projectcontents >  .title > .year {
+.project > .projectcontents > .title > .year {
     font-weight: 400;
 }
 
 .project > .projectcontents > .authors {
     font-style: italic;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .project > .projectcontents > .authors > .authorholder > .highlight_person {
@@ -92,7 +122,7 @@
 }
 
 .publications {
-    margin-top: 80px;
+    margin-top: 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -125,7 +155,7 @@
 }
 
 .publication > .info > .maininfo > .title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     margin-bottom: 6px;
 }
@@ -134,7 +164,7 @@
     display: inline-block;
     text-align: left;
     font-style: italic;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .publication > .info > .maininfo > .authors > .authorholder > .highlight_author {
@@ -144,11 +174,11 @@
 .publication > .awards {
     display: inline-block;
     text-align: left;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .publication > .awards > .award {
-    color: blue;
+    color: var(--theme-color);
     font-weight: 700;
     margin-right: 14px;
 }
@@ -181,6 +211,15 @@
     margin-right: 6px;
 }
 
+.footer {
+    margin-top: 50px;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
 .title {
     font-size: 28px;
     font-weight: 800;
@@ -190,27 +229,40 @@
 }
 
 
-@media (min-width: 808px) {
+@media (min-width: 708px) {
     .topbar  > .contents {
         padding: 0;
-        width: 760px;
+        width: 660px;
     }
     .about {
-        width: 760px;
+        margin-top: 90px;
+        width: 660px;
+        flex-direction: row;
+    }
+    .about > img {
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+    }
+    .about > .contents {
+        margin: 0 0 0 30px;
+        text-align: left;
     }
     .projects {
-        width: 760px;
+        margin-top: 70px;
+        width: 660px;
     }
     .project {
         flex-direction: row;
     }
     .project > img {
-        width: 360px;
+        width: 300px;
         margin-right: 24px;
         margin-bottom: 0px;
     }
     .publications {
-        width: 760px;
+        margin-top: 70px;
+        width: 660px;
     }
     .publication > .info {
         flex-direction: row;
@@ -232,9 +284,21 @@
         width: 960px;
     }
     .about {
+        margin-top: 90px;
         width: 960px;
+        flex-direction: row;
+    }
+    .about > img {
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+    }
+    .about > .contents {
+        margin: 0 0 0 30px;
+        text-align: left;
     }
     .projects {
+        margin-top: 70px;
         width: 960px;
     }
     .project {
@@ -246,6 +310,7 @@
         margin-bottom: 0px;
     }
     .publications {
+        margin-top: 70px;
         width: 960px;
     }
     .publication > .info {

@@ -4,6 +4,7 @@ import { Topbar } from './Components/topbar';
 import { About } from './Components/about';
 import { Projects } from './Components/projects';
 import { Publications } from './Components/publications';
+import { Footer } from './Components/footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <section id="about"><About/></section>
       <section id="projects"><Projects/></section>
       <section id="publications"><Publications/></section>
+      <Footer/>
     </div>
   );
 }
