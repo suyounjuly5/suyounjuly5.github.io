@@ -71,6 +71,22 @@
     font-weight: 600;
 }
 
+.about > .contents > .icons {
+    margin-top: 12px;
+}
+
+.about > .contents > .icons > a > img {
+    width: 28px;
+    height: 28px;
+    padding: 8px;
+    transition: all 0.2s linear;
+}
+
+.about > .contents > .icons > a > img:hover {
+    transform: scale(1.2);
+
+}
+
 .projects {
     margin-top: 50px;
     width: 100%;

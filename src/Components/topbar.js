@@ -12,13 +12,11 @@ export const Topbar = (props) => {
                     <a href="#about" className='hamburger-bar'>About Me</a>
                     <a href="#projects" className='hamburger-bar'>Projects</a>
                     <a href="#publications" className='hamburger-bar'>Publications</a>
-                    <a href='PDF/CV.pdf' className='hamburger-bar'>CV</a>
                 </div>
                 <div className='links'>
                     <a href="#about">About Me</a>
                     <a href="#projects">Projects</a>
                     <a href="#publications">Publications</a>
-                    <a href='PDF/CV.pdf'>CV</a>
                 </div>             
             </div>
         </nav>
